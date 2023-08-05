@@ -1,72 +1,56 @@
 # container-developer-tools
 
-A Fedora based container with tools for developers.
-
-This image is based of the [DevFile Developer Images](https://github.com/devfile/developer-images) with some additional tools.
+A Fedora based container containing development tools.
 
 [![developer-tools build status](https://quay.io/repository/ucomesdag/developer-tools/status "Container Repository on Quay")](https://quay.io/repository/ucomesdag/developer-tools)
 
-## Additional Development Tools
 
-| Tool or language    | Fedora based devtools image         |
+## Included Development Tools
+
+| Tool or language    | Fedora based image                  |
 |---------------------|-------------------------------------|
-|------PYTHON---------|-------------------------------------|
-| `tox`               |`<via pip>`                          |
-| `pyenv`             |`<https://pyenv.run/>`               |
-| `pyton3.10`         |`<via pyenv>`                        |
-| `python3.11`        |`<via pyenv`                         |
-|--------CLOUD--------|-------------------------------------|
-| `podman-compose`    |`podman-compose`                     |
-| `ansible`           |`<via pip>`                          |
-| `ansible-better`    |`<via pip>`                          |
-| `ansible-lint`      |`<via pip>`                          |
-| `yamllint`          |`<via pip>`                          |
-| `molecule`          |`<via pip>`                          |
-
-## Included Development Tools from the Developer Images
-
-| Tool                | ubi8 based image                    |
-|---------------------|-------------------------------------|
+| `7z`                |`p7zip-plugins`                      |
 | `bash`              |`bash`                               |
-| `bat`               |`<gh releases>`                      |
+| `bat`               |`bat`                                |
 | `curl`              |`curl`                               |
-| `ps`                |`ps`                                 |
 | `diff`              |`diffutils`                          |
-| `emacs`             |`NOT AVAILABLE (fedora only)`        |
-| `fish`              |`NOT AVAILABLE (fedora only)`        |
-| `gh`                |`<gh releases>`                      |
-| `git`               |`git`                                |
+| `emacs`             |`emacs`                              |
+| `fish`              |`fish`                               |
+| `gh`                |`gh`                                 |
 | `git-lfs`           |`git-lfs`                            |
+| `git`               |`git`                                |
+| `htop`              |`htop`                               |
 | `ip`                |`iproute`                            |
 | `jq`                |`jq`                                 |
-| `htop`              |`NOT AVAILABLE (fedora only)`        |
 | `less`              |`less`                               |
 | `lsof`              |`lsof`                               |
 | `man`               |`man`                                |
 | `nano`              |`nano`                               |
-| `netcat`            |`NOT AVAILABLE`                      |
+| `netcat`            |`netcat`                             |
 | `netstat`           |`net-tools`                          |
 | `openssh-client`    |`openssh-clients`                    |
-| `7z`                |`p7zip-plugins`                      |
-| `ripgrep`           |`<gh releases>`                      |
+| `pre-commit`        |`<via pip>`                          |
+| `ps`                |`ps`                                 |
+| `ripgrep`           |`ripgrep`                            |
 | `rsync`             |`rsync`                              |
 | `scp`               |`openssh-clients`                    |
-| `screen`            |`NOT AVAILABLE`                      |
+| `screen`            |`screen`                             |
 | `sed`               |`sed`                                |
 | `shasum`            |`perl-Digest-SHA`                    |
+| `shellcheck`        |`shellcheck`                         |
 | `socat`             |`socat`                              |
-| `sudo`              |`sudo`                               |
-| `ss`                |`NOT AVAILABLE`                      |
+| `ss`                |`ss`                                 |
 | `ssl-cert`          |`NOT AVAILABLE`                      |
+| `sudo`              |`sudo`                               |
 | `tail`              |`<built in>`                         |
 | `tar`               |`tar`                                |
 | `time`              |`time`                               |
-| `tldr`              |`NOT AVAILABLE (fedora only)`        |
-| `tmux`              |`NOT AVAILABLE (fedora only)`        |
+| `tldr`              |`tldr`                               |
+| `tmux`              |`tmux`                               |
 | `vim`               |`vim`                                |
 | `wget`              |`wget`                               |
 | `zip`               |`zip`                                |
-| `zsh`               |`NOT AVAILABLE (fedora only)`        |
+| `zsh`               |`zsh`                                |
 |--------JAVA---------|-------------------------------------|
 | `sdk`               |`<https://get.sdkman.io>`            |
 | `java`              |`<8.0.332-tem via sdkman>`           |
@@ -84,46 +68,62 @@ This image is based of the [DevFile Developer Images](https://github.com/devfile
 | `clang`             |`clang`                              |
 | `clangd`            |`llvm-toolset`                       |
 | `gdb`               |`gdb`                                |
-|--------PHP----------|-------------------------------------|
-| `php`               |`php`                                |
-| `composer`          |`https://getcomposer.org/`           |
+|---------PHP---------|-------------------------------------|
+| `php`               |`php8`                               |
+| `composer`          |`<https://getcomposer.org/>`         |
 | `xdebug`            |`pecl`                               |
 |-------NODEJS--------|-------------------------------------|
-| `nodejs`            |`nodejs`                             |
+| `nvm`               |`<0.39.1 via gh release>`            |
+| `nodejs`            |`<12.22.12 via nvm>`                 |
+| `nodejs`            |`<14.21.3 via nvm>`                  |
+| `nodejs`            |`<16.20.1 via nvm>`                  |
+| `nodejs`            |`<18.17.0 via nvm>/default`          |
+| `nodejs`            |`<20.5.0 via nvm>`                   |
 | `npm`               |`npm`                                |
 | `yarn`              |`<via npm>`                          |
-|--------GO-----------|-------------------------------------|
+|---------GO----------|-------------------------------------|
 | `go`                |`go-toolset`                         |
 | `gopls`             |`golang.org/x/tools/gopls`           |
 |--------.NET---------|-------------------------------------|
-| `dotnet`            |`dotnet-sdk-6.0`                     |
-|------PYTHON---------|-------------------------------------|
+| `dotnet`            |`dotnet-sdk-7.0`                     |
+|-------PYTHON--------|-------------------------------------|
 | `python`            |`python39`                           |
 | `setuptools`        |`python39-setuptools`                |
 | `pip`               |`python39-pip`                       |
 | `pylint`            |`<via pip>`                          |
 | `yq`                |`<via pip>`                          |
+| `tox`               |`<via pip>`                          |
+| `pyenv`             |`<https://pyenv.run/>`               |
+| `pyton3.10`         |`<via pyenv>`                        |
+| `python3.11`        |`<via pyenv`                         |
 |--------RUST---------|-------------------------------------|
 | `rustup`            |`<sh.rustup.rs>`                     |
 | `rust-src`          |`<via rustup>`                       |
 | `rust-analysis`     |`<via rustup>`                       |
-|--------Platform-----|-------------------------------------|
-| `camel-k`           |`<gh release>`                       |
-|------CLOUD----------|-------------------------------------|
-| `oc`                |`mirror.openshift.com`               |
-| `podman`            |`container-tools:rhel8`              |
-| `buildah`           |`container-tools:rhel8`              |
-| `skopeo`            |`container-tools:rhel8`              |
-| `kubectl`           |`<kubernetes dnf repo>`              |
-| `krew`              |`<gh releases>`                      |
-| `helm`              |`<get.helm.sh>`                      |
-| `kustomize`         |`<gh releases>`                      |
-| `tkn`               |`<gh releases>`                      |
-| `kn`                |`<gh releases>`                      |
-| `terraform`         |`<releases.hashicorp.com>`           |
-| `docker`            |`<download.docker.com>`              |
-| `docker-compose`    |`<gh releases>`                      |
-| `kamel`             |`<gh release>`                       |
+|-------PLATFORM------|-------------------------------------|
+| `camel-k`           |`<1.12.1 via gh release>`            |
+|--------CLOUD--------|-------------------------------------|
+| `oc`                |`<https://mirror.openshift.com/>`    |
+| `podman`            |`podman`                             |
+| `podman-compose`    |`podman-compose`                     |
+| `buildah`           |`buildah`                            |
+| `skopeo`            |`skopeo`                             |
+| `kubectl`           |`kubernetes-client`                  |
+| `krew`              |`<0.4.4 via gh release>`             |
+| `helm`              |`helm`                               |
+| `kustomize`         |`golang-sigs-k8s-kustomize`          |
+| `tkn`               |`<0.31.1 via gh release>`            |
+| `kn`                |`<1.10.0 via gh release>`            |
+| `terraform`         |`<1.5.3 via releases.hashicorp.com >`|
+| `docker`            |`moby-engine`                        |
+| `docker-compose`    |`docker-compose`                     |
+| `kamel`             |`<1.12.1 via gh release>`            |
+| `ansible`           |`<via pip>`                          |
+| `ansible-better`    |`<via pip>`                          |
+| `ansible-lint`      |`<via pip>`                          |
+| `yamllint`          |`<via pip>`                          |
+| `molecule`          |`<via pip>`                          |
+| **TOTAL SIZE**      | **8.06GB**                          |
 
 ## Included libraries
 + e2fsprogs v1.46.5
@@ -139,6 +139,8 @@ This image is based of the [DevFile Developer Images](https://github.com/devfile
 + NODEJS_HOME_12
 + NODEJS_HOME_14
 + NODEJS_HOME_16
++ NODEJS_HOME_18
++ NODEJS_HOME_20
 
 ## Testing
 
